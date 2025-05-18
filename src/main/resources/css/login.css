@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+.root{
+    -fx-background: linear-gradient(#E6A6BA, #DE6694);
+}
+
+.text {
+    -fx-font-family: "Pangolin", cursive;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.6),0,0.0,1,1);
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.botao {
+    -fx-background-color:#D993AE;
+    -fx-font-size: 25px;
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+.textfield {
+    -fx-background-color:rgba(250, 250, 250, 0.47);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+}

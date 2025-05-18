@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="background" prefHeight="371.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <stylesheets>
+        <URL value="@/css/login.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lblNome" layoutX="28.0" layoutY="162.0" stylesheets="@../../resources/css/login.css" text="Username" />
+      <TextField fx:id="txtNome" layoutX="28.0" layoutY="189.0" prefWidth="245.0" styleClass="textfield" stylesheets="@../../resources/css/login.css" />
+      <Label layoutX="28.0" layoutY="214.0" stylesheets="@../../resources/css/login.css" text="Senha" />
+      <TextField fx:id="txtSenha" layoutX="28.0" layoutY="239.0" prefHeight="25.0" prefWidth="245.0" styleClass="textfield" stylesheets="@../../resources/css/login.css" />
+      <Button id="bntLogar" fx:id="bntLogar" layoutX="28.0" layoutY="285.0" mnemonicParsing="false" onAction="#onClickLogar" prefHeight="51.0" prefWidth="245.0" styleClass="botao" stylesheets="@../../resources/css/login.css" text="Logar" />
+      <ImageView fx:id="Imagem" fitHeight="128.0" fitWidth="128.0" layoutX="86.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
