@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="740.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.PrincipalController">
+    <stylesheets>
+        <URL value="@/css/principal.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="userPane" prefHeight="520.0" prefWidth="235.0" styleClass="userPane" stylesheets="@../../resources/css/principal.css">
+         <children>
+            <ImageView fx:id="userImage" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/imagens/userIcon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userName" layoutX="104.0" layoutY="243.0" stylesheets="@../../resources/css/principal.css" text="Label" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="screenPane" layoutX="235.0" prefHeight="520.0" prefWidth="505.0" styleClass="screenPane" stylesheets="@../../resources/css/principal.css">
+         <children>
+            <MenuBar id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="505.0" styleClass="menuBar" stylesheets="@../../resources/css/principal.css" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu id="menu" mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

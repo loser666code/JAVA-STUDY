@@ -1,4 +1,5 @@
 dal\Conn.class
+controller\PrincipalController.class
 principal\App.class
 controller\LoginController.class
 model\LoginDAO.class

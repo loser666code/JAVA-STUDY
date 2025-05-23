@@ -19,7 +19,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("estranha loja");
-        URL url = new File("src/main/java/view/Login.fxml").toURI().toURL();
+        URL url = new File("src/main/java/view/login.fxml").toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
         Parent root = loader.load();
         Stage telaLogin = new Stage();
