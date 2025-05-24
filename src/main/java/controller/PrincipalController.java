@@ -3,6 +3,9 @@ package controller;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -11,7 +14,19 @@ public class PrincipalController{
    
     Stage stagePrincipal = new Stage();
     
-     @FXML
+    @FXML
+    private MenuItem cadastrarUserMI;
+
+    @FXML
+    private MenuBar menuBar;
+
+    @FXML
+    private Menu menuUsers;
+
+    @FXML
+    private MenuItem relatoriosMI;
+
+    @FXML
     private ImageView userImage;
 
     @FXML
@@ -28,6 +43,7 @@ public class PrincipalController{
             System.out.println("Acesso Liberado!");
         } else if (dados.get(1) == "client"){
             System.out.println("Acesso Restringido!");
+            menuUsers.setDisable(true);
         }
     }
     

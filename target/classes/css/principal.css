@@ -4,7 +4,11 @@
   --color-4: #6ba8e6;
   --color-5: #a3e6d7; */
   
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
+*{
+    -fx-font-family: "Pangolin", cursive;
+}
 .userPane{
     -fx-background-color:#9a76d0;
 }
@@ -16,3 +20,10 @@
 .menuBar {
     -fx-background-color:#6ba8e6;
 }
+
+.label {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.6),0,0.0,1,1);
+    -fx-font-size: 16px
+}
+
