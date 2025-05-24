@@ -48,7 +48,7 @@
                 </Menu>
                 <Menu fx:id="menuUsers" mnemonicParsing="false" text="Users">
                   <items>
-                    <MenuItem fx:id="cadastrarUserMI" mnemonicParsing="false" text="Cadastrar Users" />
+                    <MenuItem fx:id="UserMI" mnemonicParsing="false" onAction="#userMiClick" text="Usuarios" />
                         <MenuItem fx:id="relatoriosMI" mnemonicParsing="false" text="Relatorios" />
                   </items>
                 </Menu>

@@ -19,11 +19,50 @@
 
 .menuBar {
     -fx-background-color:#6ba8e6;
+    -fx-text-fill: white;
+}
+
+.text {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.6),0,0.0,1,1);
+    -fx-font-size: 16px;
 }
 
 .label {
     -fx-text-fill: white;
-    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.6),0,0.0,1,1);
-    -fx-font-size: 16px
 }
 
+.menu-item {
+    -fx-background-color:#9a76d0;
+}
+
+.menu-item:focused{
+    -fx-background-color:#a3e6d7;
+}
+
+.bntCarinho {
+    -fx-background-color:#D993AE;
+    -fx-font-size: 16px;
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 0, 0.0 , 0 , 1 );
+}
+
+.bntWishlist {
+    -fx-background-color:#6ba8e6;
+    -fx-font-size: 16px;
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 0, 0.0 , 0 , 1 );
+}
+
+.bntReservas {
+    -fx-background-color:#a3e6d7;
+    -fx-font-size: 16px;
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 0, 0.0 , 0 , 1 );    
+}

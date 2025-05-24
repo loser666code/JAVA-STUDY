@@ -1,10 +1,11 @@
+controller\LoginController.class
+model\LoginDAO.class
+controller\ListagemUsersController.class
+module-info.class
+util\Alerta.class
+model\User.class
 dal\Conn.class
 controller\PrincipalController.class
 principal\App.class
-controller\LoginController.class
-model\LoginDAO.class
-module-info.class
-util\Alerta.class
 model\genericDAO.class
-model\User.class
 model\UserDAO.class
