@@ -20,8 +20,8 @@
             <Image url="@../../resources/imagens/pesquisarIcon.png" />
          </image>
       </ImageView>
-      <Button fx:id="bntCadastrar" layoutX="25.0" layoutY="507.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="350.0" text="Cadastrar User" />
-      <TableView fx:id="twUsers" layoutX="26.0" layoutY="87.0" prefHeight="411.0" prefWidth="350.0">
+      <Button fx:id="bntCadastrar" layoutX="25.0" layoutY="507.0" mnemonicParsing="false" onAction="#bntCadastrarOnClick" prefHeight="50.0" prefWidth="350.0" text="Cadastrar User" />
+      <TableView fx:id="twUsers" layoutX="26.0" layoutY="87.0" onMouseClicked="#tableViewOnClick" prefHeight="411.0" prefWidth="350.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />

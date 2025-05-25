@@ -1,5 +1,10 @@
 package model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class User {
     private int id;
     private String nome;
@@ -95,5 +100,66 @@ public class User {
         this.username = username;
     }
     
+    private transient IntegerProperty idProperty;
     
+    public IntegerProperty idProperty(){
+        if (idProperty == null){
+            idProperty = new SimpleIntegerProperty(id);
+        }
+        return idProperty;
+    }
+    
+    private transient StringProperty nomeProperty;
+    
+    public StringProperty nomeProperty(){
+        if (nomeProperty == null){
+            nomeProperty = new SimpleStringProperty(nome);
+        }
+        return nomeProperty;
+    }
+    
+    private transient StringProperty sobrenomeProperty;
+    
+    public StringProperty sobrenomeProperty(){
+        if (sobrenomeProperty == null){
+            sobrenomeProperty = new SimpleStringProperty(sobrenome);
+        }
+        return sobrenomeProperty;
+    }
+    
+    private transient StringProperty emailProperty;
+    
+    public StringProperty emailProperty(){
+        if (emailProperty == null){
+            emailProperty = new SimpleStringProperty(email);
+        }
+        return emailProperty;
+    }
+    
+    private transient StringProperty senhaProperty;
+    
+    public StringProperty senhaProperty(){
+        if (senhaProperty == null){
+            senhaProperty = new SimpleStringProperty(senha);
+        }
+        return senhaProperty;
+    }
+    
+    private transient StringProperty cargoProperty;
+    
+    public StringProperty cargoProperty(){
+        if (cargoProperty == null){
+            cargoProperty = new SimpleStringProperty(cargo);
+        }
+        return emailProperty;
+    }
+    
+    private transient StringProperty usernameProperty;
+    
+    public StringProperty usernameProperty(){
+        if (usernameProperty == null){
+            usernameProperty = new SimpleStringProperty(username);
+        }
+        return usernameProperty;
+    }
 }

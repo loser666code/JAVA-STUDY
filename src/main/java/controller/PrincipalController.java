@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -51,6 +54,13 @@ public class PrincipalController{
         Stage stageLU = new Stage();
         ListagemUsersController luc = loader.getController();
         luc.setStage(stageLU);
+        stageLU.setOnShown(evento -> {
+            try {
+                luc.ajustarTabela();
+            } catch (SQLException ex) {
+                Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("" + "/css/listagemusers.css").toExternalForm());
         stageLU.setScene(scene);
