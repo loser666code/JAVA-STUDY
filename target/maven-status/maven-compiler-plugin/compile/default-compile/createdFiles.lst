@@ -7,5 +7,6 @@ model\User.class
 dal\Conn.class
 controller\PrincipalController.class
 principal\App.class
+controller\CadastrarUsersController.class
 model\genericDAO.class
 model\UserDAO.class
