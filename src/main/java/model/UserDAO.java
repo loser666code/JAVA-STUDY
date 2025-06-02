@@ -8,13 +8,13 @@ import javafx.collections.ObservableList;
 
 public class UserDAO extends genericDAO{
     public void salvar(User user) throws SQLException{
-        String insert = "INSERT INTO user(nome,sobrenome,email,cargo,senha,username) VALUES (?,?,?,?,?,?)";
-        save(insert,user.getNome(),user.getSobrenome(),user.getEmail(),user.getCargo(),user.getSenha(),user.getUsername());
+        String insert = "INSERT INTO user(nome,sobrenome,email,cargo,senha,username,telefone,aniversario) VALUES (?,?,?,?,?,?,?,?)";
+        save(insert,user.getNome(),user.getSobrenome(),user.getEmail(),user.getCargo(),user.getSenha(),user.getUsername(),user.getTelefone(),user.getAniversario());
     }
     
     public void alterar(User user) throws SQLException{
-        String update = "UPDATE user" + "SET nome= ?, sobrenome = ?, email = ?, crago=?, senha=?,username=?" + "WHERE idUser = ?";
-        editar(update,user.getNome(),user.getSobrenome(),user.getEmail(),user.getCargo(),user.getSenha(),user.getUsername());
+        String update = "UPDATE user" + "SET nome= ?, sobrenome = ?, email = ?, crago=?, senha=?,username=?,telefone=?,aniversario=?" + "WHERE idUser = ?";
+        editar(update,user.getNome(),user.getSobrenome(),user.getEmail(),user.getCargo(),user.getSenha(),user.getUsername(),user.getTelefone(),user.getAniversario());
     }
     
     public void deletar(long id) throws SQLException{
@@ -36,6 +36,8 @@ public class UserDAO extends genericDAO{
             user.setCargo(rs.getString("cargo"));
             user.setSenha(rs.getString("senha"));
             user.setUsername(rs.getString("username"));
+            user.setTelefone(rs.getString("telefone"));
+            user.setAniversario(rs.getString("aniversario"));
             
             lista.add(user);
         }
@@ -60,6 +62,8 @@ public class UserDAO extends genericDAO{
             user.setCargo(rs.getString("cargo"));
             user.setSenha(rs.getString("senha"));
             user.setUsername(rs.getString("username"));
+            user.setTelefone(rs.getString("telefone"));
+            user.setAniversario(rs.getString("aniversario"));
             
             usuario.add(user);
         }

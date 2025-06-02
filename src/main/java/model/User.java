@@ -13,8 +13,10 @@ public class User {
     private String senha;
     private String cargo;
     private String username;
+    private String telefone;
+    private String aniversario;
 
-    public User(int id, String nome, String sobrenome, String email, String senha, String cargo, String username) {
+    public User(int id, String nome, String sobrenome, String email, String senha, String cargo, String username, String telefone, String aniversario) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -22,22 +24,28 @@ public class User {
         this.senha = senha;
         this.cargo = cargo;
         this.username = username;
+        this.telefone = telefone;
+        this.aniversario = aniversario;
     }
     
-    public User( String nome, String sobrenome, String email, String senha, String cargo, String username) {
+    public User( String nome, String sobrenome, String email, String senha, String cargo, String username, String telefone, String aniversario) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.senha = senha;
         this.cargo = cargo;
         this.username = username;
+        this.telefone = telefone;
+        this.aniversario = aniversario;
     }
     
-    public User(String email, String senha, String cargo, String username) {
+    public User(String email, String senha, String cargo, String username, String telefone, String aniversario) {
         this.email = email;
         this.senha = senha;
         this.cargo = cargo;
         this.username = username;
+        this.telefone = telefone;
+        this.aniversario = aniversario;
     }
     
     public User() {
@@ -98,6 +106,22 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getAniversario() {
+        return aniversario;
+    }
+
+    public void setAniversario(String aniversario) {
+        this.aniversario = aniversario;
     }
     
     private transient IntegerProperty idProperty;
@@ -161,5 +185,23 @@ public class User {
             usernameProperty = new SimpleStringProperty(username);
         }
         return usernameProperty;
+    }
+    
+    private transient StringProperty telefoneProperty;
+    
+    public StringProperty telefoneProperty(){
+        if (telefoneProperty == null){
+            telefoneProperty = new SimpleStringProperty(telefone);
+        }
+        return telefoneProperty;
+    }
+    
+    private transient StringProperty aniversarioProperty;
+    
+    public StringProperty aniversarioProperty(){
+        if (aniversarioProperty == null){
+            aniversarioProperty = new SimpleStringProperty(aniversario);
+        }
+        return aniversarioProperty;
     }
 }

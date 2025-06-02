@@ -84,7 +84,14 @@ public class ListagemUsersController  {
             TableColumn<User, String> colunaUsername = new TableColumn<>("Username");
             colunaUsername.setCellValueFactory(u -> u.getValue().usernameProperty());
             
-            twUsers.getColumns().addAll(colunaID,colunaNome,colunaSobrenome, colunaEmail, colunaCargo, colunaUsername);
+            TableColumn<User, String> colunaTelefone = new TableColumn<>("Telefone");
+            colunaTelefone.setCellValueFactory(u -> u.getValue().telefoneProperty());
+            
+            TableColumn<User, String> colunaAniversario = new TableColumn<>("Aniversario");
+            colunaAniversario.setCellValueFactory(u -> u.getValue().aniversarioProperty());
+            
+            twUsers.getColumns().addAll(colunaID,colunaNome,colunaSobrenome, colunaEmail, colunaCargo, colunaUsername,colunaTelefone,
+                    colunaAniversario);
             
             FilteredList<User> listaFiltrada = new FilteredList<>(lista, p -> true);
             tfPesquisa.textProperty().addListener((obs,oldVal,newVal) -> {
@@ -97,7 +104,9 @@ public class ListagemUsersController  {
                         || user.getSobrenome().toLowerCase().contains(filtro)
                         || user.getCargo().toLowerCase().contains(filtro)
                         || user.getEmail().toLowerCase().contains(filtro)
-                        || user.getUsername().toLowerCase().contains(filtro);
+                        || user.getUsername().toLowerCase().contains(filtro)
+                        || user.getTelefone().toLowerCase().contains(filtro)
+                        || user.getAniversario().toLowerCase().contains(filtro);
              });
             });
             

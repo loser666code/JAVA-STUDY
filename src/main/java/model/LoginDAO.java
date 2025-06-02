@@ -41,6 +41,7 @@ public class LoginDAO extends genericDAO {
             user.setCargo(rs.getString("cargo"));
             user.setSenha(rs.getString("senha"));
             user.setUsername(rs.getString("username"));
+            user.setTelefone(rs.getString("telefone"));
             
         }
             rs.close();
