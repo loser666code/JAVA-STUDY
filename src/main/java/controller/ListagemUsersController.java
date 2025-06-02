@@ -73,18 +73,18 @@ public class ListagemUsersController  {
             colunaNome.setStyle("-fx-aligment: CENTER;");
             
             TableColumn<User, String> colunaSobrenome = new TableColumn<>("Sobrenome");
-            colunaNome.setCellValueFactory(u -> u.getValue().sobrenomeProperty());
+            colunaSobrenome.setCellValueFactory(u -> u.getValue().sobrenomeProperty());
             
             TableColumn<User, String> colunaEmail = new TableColumn<>("Email");
-            colunaNome.setCellValueFactory(u -> u.getValue().emailProperty());
+            colunaEmail.setCellValueFactory(u -> u.getValue().emailProperty());
             
             TableColumn<User, String> colunaCargo = new TableColumn<>("Cargo");
-            colunaNome.setCellValueFactory(u -> u.getValue().cargoProperty());
+            colunaCargo.setCellValueFactory(u -> u.getValue().cargoProperty());
             
             TableColumn<User, String> colunaUsername = new TableColumn<>("Username");
-            colunaNome.setCellValueFactory(u -> u.getValue().usernameProperty());
+            colunaUsername.setCellValueFactory(u -> u.getValue().usernameProperty());
             
-            twUsers.getColumns().addAll(colunaID,colunaNome,colunaSobrenome, colunaCargo, colunaEmail, colunaUsername);
+            twUsers.getColumns().addAll(colunaID,colunaNome,colunaSobrenome, colunaEmail, colunaCargo, colunaUsername);
             
             FilteredList<User> listaFiltrada = new FilteredList<>(lista, p -> true);
             tfPesquisa.textProperty().addListener((obs,oldVal,newVal) -> {

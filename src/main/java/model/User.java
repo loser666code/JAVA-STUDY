@@ -151,7 +151,7 @@ public class User {
         if (cargoProperty == null){
             cargoProperty = new SimpleStringProperty(cargo);
         }
-        return emailProperty;
+        return cargoProperty;
     }
     
     private transient StringProperty usernameProperty;
